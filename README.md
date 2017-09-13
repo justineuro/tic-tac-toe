@@ -4,7 +4,7 @@
 
 `t3C` is for x-terminals that support color while `t3` is for x-terminals that don't support color.  Both bash scripts are two-player implementations of tic-tac-toe.
 
-To play: at the command line, within the directory containing the script issue the command:
+To play: at the command line, within the directory containing the script, issue the command:
 ```bash
 bash t3C
 ```
