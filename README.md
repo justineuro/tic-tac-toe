@@ -1,6 +1,6 @@
 ## t3C and t3
 
-`t3C` and `t3` are [Bash](https://www.gnu.org/software/bash/) script (see [Wikipedia:Bash\_(Unix_shell)](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) for more info) implementations of the usual [Tic-Tac-Toe (or Noughts and Crosses)](https://en.wikipedia.org/wiki/Tic-Tac-Toe) [paper-and-pencil game](https://en.wikipedia.org/wiki/Paper-and-pencil\_game).  
+`t3C` and `t3` are [Bash](https://www.gnu.org/software/bash/) script (see [Wikipedia:Bash\_(Unix_shell)](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) for more info) implementations of the usual [Tic-Tac-Toe (or Noughts-and-Crosses)](https://en.wikipedia.org/wiki/Tic-Tac-Toe) [paper-and-pencil game](https://en.wikipedia.org/wiki/Paper-and-pencil\_game).  
 
 `t3C` is for colored x-terminals while `t3` is for balck-and-white x-terminals.  Both scripts are two-player versions of tic-tac-toe.
 
