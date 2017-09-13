@@ -8,7 +8,7 @@ To play: at the command line, within the directory containing the script, issue 
 ```bash
 bash t3C
 ```
-(or simply `t3C` if the this script is on your path of executables, i.e., if `echo $PATH` shows a list of directories that includes the directory containing the bash script `t3C`.  To make sure, you can copy these two bash scripts to your `$HOME/.local/bin directory` then add the `.local/bin` directory to your `$PATH`).
+(or simply `t3C` if the this script is on your path of executables, i.e., if `echo $PATH` shows a list of directories that includes the directory containing the bash script `t3C`.  To make sure, you can copy these two bash scripts to your `$HOME/.local/bin directory` then add the `.local/bin` directory to your `PATH`, e.g., at the command line `PATH=$PATH:$HOME/.local/bin/`).
 
 A a screenshot (partly edited) is given below.  
 ![tic-tac-toe: The Game!](./t3C-all.gif)
