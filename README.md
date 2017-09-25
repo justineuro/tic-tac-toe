@@ -13,5 +13,8 @@ bash t3C
 A screenshot (partly edited) of a `t3C` tic-tac-toe game session is given below.  
 ![tic-tac-toe: The Game!](./t3C-all.gif)
 
+## Acknowledgements
+My sincerest gratitude to Brian Fox for [Bash](https://www.gnu.org/software/bash/); Machtelt Garrels for the book [Bash Guide for Beginners](http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html), Vivek Gite for the book [Linux Script Shell Tutorial](http://www.freeos.com/guides/lsst/), and Steve Parker for the [Unix/Linux Shell Cheatsheet](http://steve-parker.org/sh/cheatsheet.pdf); Eddie K&ouml;hler for [Gifsicle](https://www.lcdf.org/gifsicle/), [ImageMagick](https://www.imagemagick.org/), and Dmitry Groshev, Mark Tyler, Xiaolin Wu et. al. for [mtPaint].  Much thanks, too, to the [Debian Project](https://www.debian.org) for the Debian 8 (Jessie) GNU/Linux OS and [GitHub](https://github.com) for its generosity in providing space for [this project](https://github.com/justineuro/tic-tac-toe). 
+
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><b>tic-tac-toe</b></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/justineuro/" property="cc:attributionName" rel="cc:attributionURL">Justine Leon A. Uro</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/justineuro/mdginabc2svg" rel="dct:source">https://github.com/justineuro/tic-tac-toe</a>
