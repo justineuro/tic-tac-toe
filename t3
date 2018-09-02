@@ -4,8 +4,8 @@
 # Filename: t3 
 # Usage: At the prompt, /bin/bash /path/to/t3  or /path/to/t3 
 # Author: JLA Uro (justineuro@gmail.com)
-# Date:  11 February 2014 (Feast of Our Lady of Lourdes and St. Bernadette Soubirous)
-# Revised: 13Feb2014
+# Date:  11 February 2014 (Feast of Our Lady of Lourdes)
+# Revised: 13Feb2014, 02Sep2018
 #
 ###
 ##
@@ -91,7 +91,8 @@ do
       if [ "$wr1" = "$winx" -o "$wr2"  = "$winx" -o "$wr3" = "$winx" ]; then 
         echo "hooorrrray!!! ... x wins!!!" # print win message
         echo ""
-        win=1                              # set win var to 1 to end curr game
+        win=															# set win var to 1 to end curr game
+        winsx=`expr $winsx + 1`                      
       elif [ "$wc1" = "$winx" -o "$wc2" = "$winx" -o "$wc3" = "$winx" -o "$wd1" = "$winx" -o "$wd2" = "$winx" ]; then
         echo "hooorrrray!!! ... x wins!!!"
         echo ""
@@ -128,6 +129,7 @@ do
         echo "hooorrrray!!! ... o wins!!!"
         echo ""
         win=1
+        winso=`expr $winso + 1`
       elif [ "$wc1" = "$wino" -o "$wc2" = "$wino" -o "$wc3" = "$wino" -o "$wd1" = "$wino" -o "$wd2" = "$wino" ]; then
         echo "hooorrrray!!! ... o wins!!!"
         echo ""
@@ -140,7 +142,7 @@ do
   echo "Current score:"
   echo "  Total games played: $ngames"
   echo "  x wins: $winsx"
-  echo "  o wins: $winso "
+  echo "  o wins: $winso"
   echo " no wins: `expr $ngames - $winsx - $winso`"
   echo "Another game?[Y/n]"
   read no
