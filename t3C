@@ -4,15 +4,16 @@
 # Filename: t3C 
 # Usage: At the prompt, /bin/bash /path/to/t3C  or /path/to/t3C 
 # Author: JLA Uro (justineuro@gmail.com)
-# Date:  11 February 2014 (Feast of Our Lady of Lourdes and St. Bernadette Soubirous)
+# Date:  10 February 2014 (Feast of Our Lady of Lourdes)
 # Revised: 13Feb2014; 01Oct2014 (St. Therese of Lisieux); 12Aug2017 (St. Jane Frances de Chantal)  
+#						02Sep2018
 #
 ###
 ##
 #
-BLACK='\e[1;30m'
-RED='\e[1;31m'
-GREEN='\e[1;32m'
+#BLACK='\e[1;30m'
+#RED='\e[1;31m'
+#GREEN='\e[1;32m'
 YELLOW='\e[1;33m'
 BLUE='\e[1;34m'
 BOLD='\e[1;39m'
@@ -27,7 +28,7 @@ winso=0
 ngames=0
 while true
 do
-  ngames=`expr $ngames + 1`
+  ngames=$((ngames + 1))
   declare -a sq                            # declare sq an array
   sq=(1 2 3 4 5 6 7 8 9)                   # initial sqaare numbers in sq  
   echo -e ""
@@ -50,7 +51,7 @@ do
   while [ $win -eq 0 ]                     # while no win yet
   do
     echo -e "Status of squares: ${sq[*]}"  # print current sqs statuses
-    sqStatus=`echo ${sqStatus//${entry}/}`
+    sqStatus=`echo "${sqStatus//${entry}/}"`
     rtChoice=0
     while [ $rtChoice -eq 0 ]
     do
@@ -58,7 +59,7 @@ do
       while [ "$entryCode" -eq 0 ];  
       do                                   # print available sq choices
         echo -e "Remaining squares: $sqStatus" 
-        if [ `expr $i % 2` != 0 ];  then
+        if [ "$((i % 2))" != "0" ];  then
           echo -e "Entry for $x?"  
 	else
 	  echo -e "Entry for $o?"
@@ -79,7 +80,7 @@ do
         rtChoice=1
       fi
     done
-    if [ `expr $i % 2` != 0 ];  then       # player x input; steps 1,3,5,7,9
+    if [ "$((i % 2))" != "0" ];  then       # player x input; steps 1,3,5,7,9
       sq[${entry}-1]="$x"                  # asign "x" to choice entry
       echo -e ""
       echo -e "Current Grid:"              # echo modified grid
@@ -107,9 +108,9 @@ do
         echo -e "${BOLD}hooorrrray${NORM} ... $x ${BLINK}wins!!!${OBLINK}"
         echo -e ""
         win=1
-        winsx=`expr $winsx + 1`
+        winsx=$((winsx + 1))
       fi
-      i=`expr $i + 1`                      # increment step i 
+      i=$((i + 1))                      # increment step i 
       if [ $i -ge 10 -a $win = 0 ]; then   # game ends in 9 or less steps 
         echo -e "${BOLD}${BLINK}No winner! ... ${OBLINK}${NORM}"
         echo -e ""
@@ -143,16 +144,16 @@ do
         echo -e "${BOLD}hooorrrray${NORM} ... $o ${BLINK}wins!!!${OBLINK}"
         echo -e ""
         win=1
-        winso=`expr $winso + 1`
+        winso=$((winso + 1))
       fi
-      i=`expr $i + 1`                      # increment step i 
+      i=$((i + 1))                      # increment step i 
     fi
   done 
   echo -e "Current score:"
   echo -e "  Total games played: $ngames"
   echo -e "  $x wins: $winsx"
   echo -e "  $o wins: $winso "
-  echo -e " no wins: `expr $ngames - $winsx - $winso`"
+  echo -e " no wins: $((ngames - winsx - winso))"
   echo -e "Another game?[Y/n]"
   read no
   if [ "$no" = "n" -o "$no" = "N" -o "$no" = "no" -o "$no" = "No" ]; then 
