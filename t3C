@@ -104,6 +104,7 @@ do
         echo -e "${BOLD}hooorrrray${NORM} ... $x ${BLINK}wins!!!${OBLINK}" # print win message
         echo -e ""
         win=1                              # set win var to 1 to end curr game
+        winsx=$((winsx + 1))
       elif [ "$wc1" = "$winx" -o "$wc2" = "$winx" -o "$wc3" = "$winx" -o "$wd1" = "$winx" -o "$wd2" = "$winx" ]; then
         echo -e "${BOLD}hooorrrray${NORM} ... $x ${BLINK}wins!!!${OBLINK}"
         echo -e ""
@@ -140,6 +141,7 @@ do
         echo -e "${BOLD}hooorrrray${NORM} ... $o ${BLINK}wins!!!${OBLINK}"
         echo -e ""
         win=1
+        winso=$((winso + 1))
       elif [ "$wc1" = "$wino" -o "$wc2" = "$wino" -o "$wc3" = "$wino" -o "$wd1" = "$wino" -o "$wd2" = "$wino" ]; then
         echo -e "${BOLD}hooorrrray${NORM} ... $o ${BLINK}wins!!!${OBLINK}"
         echo -e ""
@@ -152,7 +154,7 @@ do
   echo -e "Current score:"
   echo -e "  Total games played: $ngames"
   echo -e "  $x wins: $winsx"
-  echo -e "  $o wins: $winso "
+  echo -e "  $o wins: $winso"
   echo -e " no wins: $((ngames - winsx - winso))"
   echo -e "Another game?[Y/n]"
   read no
